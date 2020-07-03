@@ -1,0 +1,9 @@
+// bootstrap
+$font-family-sans-serif: "Comfortaa", sans-serif;
+$body-color: #242424;
+$primary: #50b374;
+$dark: $body-color;
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";

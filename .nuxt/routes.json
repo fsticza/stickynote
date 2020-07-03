@@ -1,0 +1,16 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/fergio/Work/stickynote/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_363696ab"
+  },
+  {
+    "name": "slug",
+    "path": "/:slug",
+    "component": "/home/fergio/Work/stickynote/pages/_slug.vue",
+    "chunkName": "pages/_slug",
+    "_name": "_347ff563"
+  }
+]
