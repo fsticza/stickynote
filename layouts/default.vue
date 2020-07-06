@@ -2,10 +2,10 @@
   <div class="layout">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <nuxt-link exact to="/" class="navbar-brand">
           <img src="~/assets/img/logo.png" alt="logo" height="40" />
           <span class="pl-3">Sticky Note Consulting</span>
-        </a>
+        </nuxt-link>
         <div class="ml-auto d-none d-md-block">
           <a class="mr-4" href="tel:0036203840670">+36 20 384 0670</a> <a href="mailto:tamas.gabor.nagy@gmail.com">tamas.gabor.nagy@gmail.com</a>
         </div>
