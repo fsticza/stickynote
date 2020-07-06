@@ -6,7 +6,7 @@
           <img src="~/assets/img/logo.png" alt="logo" height="40" />
           <span class="pl-3">Sticky Note Consulting</span>
         </a>
-        <div class="ml-auto">
+        <div class="ml-auto d-none d-md-block">
           <a class="mr-4" href="tel:0036203840670">+36 20 384 0670</a> <a href="mailto:tamas.gabor.nagy@gmail.com">tamas.gabor.nagy@gmail.com</a>
         </div>
       </div>
@@ -15,10 +15,10 @@
       <img class="img" src="~assets/img/header.jpg" alt="Sticky Note Consulting - header image" />
       <div class="container">
         <h1 class="head__title">
-          <span class="head__line head__line--first-line">
+          <span class="head__line highlighted head__line--first-line">
             Eredményesebb vállalatok, 
           </span>
-          <span class="head__line">
+          <span class="head__line highlighted">
             élvezetesebb munkahelyek
           </span>
         </h1>
@@ -26,14 +26,7 @@
     </header>
     <div class="layout-body">
       <div class="container my-4">
-        <div class="row">
-          <main class="col-sm-8 col-lg-9">
-            <nuxt />
-          </main>
-          <aside class="col-sm-4 col-lg-3">
-            <services />
-          </aside>
-        </div>
+        <nuxt />
       </div>
     </div>
     <app-footer />
@@ -41,12 +34,11 @@
 </template>
 
 <script>
-import Services from "@/components/Services.vue";
+
 import AppFooter from "@/components/AppFooter.vue";
 
 export default {
   components: {
-    Services,
     AppFooter
   }
 };
@@ -88,17 +80,18 @@ export default {
   }
 }
 .head__title {
-  font-size: 2.75rem;
+  font-size: 1.25rem;
   position: relative;
   text-align: center;
   z-index: 3;
   color: #fff;
   text-shadow: 0 0 5px #000;
 
+  @include media-breakpoint-up(md) {
+    font-size: 2.75rem;
+  }
+
   .head__line {
-    background: $dark;
-    display: inline-block;
-    padding: 10px;
     margin: 10px;
     transform: translateX(10%);
 

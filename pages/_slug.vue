@@ -1,12 +1,10 @@
 <template>
   <section>
-    <p class="back">
-      <nuxt-link exact to="/">⟵ Vissza</nuxt-link>
-    </p>
-    <h1 class="h2">{{ post.fields.title }}</h1>
-    <div
-      class="image"
-    ></div>
+    <div class="d-flex align-items-center mb-2">
+      <h1 class="highlighted h1">{{ post.fields.title }}</h1>
+      <nuxt-link exact to="/" class="ml-auto btn btn-outline-primary">Vissza</nuxt-link>
+    </div>
+    <img v-if="post.fields.heroImage.fields" :src="post.fields.heroImage.fields.file.url" class="w-100 mb-3" :alt="post.fields.heroImage.fields.title">
     <article v-html="$md.render(post.fields.body)"></article>
   </section>
 </template>
