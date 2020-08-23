@@ -61,6 +61,7 @@ export default {
   },
   modules: ["@nuxtjs/markdownit"],
   markdownit: {
+    html: true,
     injected: true
   },
   generate: {

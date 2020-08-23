@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <nuxt-link exact to="/" class="navbar-brand">
-          <img src="~/assets/img/logo.png" alt="logo" height="40" />
+          <img loading="lazy" src="~/assets/img/logo.png" alt="logo" height="40" />
           <span class="pl-3">Sticky Note Consulting</span>
         </nuxt-link>
         <div class="ml-auto d-none d-md-block">
@@ -84,19 +84,19 @@ export default {
   position: relative;
   text-align: center;
   z-index: 3;
-  color: #fff;
-  text-shadow: 0 0 5px #000;
 
   @include media-breakpoint-up(md) {
-    font-size: 2.75rem;
+    font-size: $h1-font-size;
   }
 
   .head__line {
+    padding: 1rem;
     margin: 10px;
-    transform: translateX(10%);
+    width: 10em;
+    transform: translateX(10%) rotate(-5deg);
 
     &--first-line {
-      transform: translateX(-10%);
+      transform: translateX(-10%) rotate(5deg);
       margin-bottom: 10px;
     }
   }

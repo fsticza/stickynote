@@ -7,9 +7,9 @@
         </div>
         <div class="card-columns mb-2">
           <article class="card shadow" v-for="post in posts" :key="post.fields.slug">
-            <img v-if="post.fields.heroImage.fields" :src="post.fields.heroImage.fields.file.url" height="200" class="card-img-top" :alt="post.fields.heroImage.fields.title">
+            <img v-if="post.fields.heroImage" :src="post.fields.heroImage.fields.file.url" height="200" class="card-img-top" :alt="post.fields.heroImage.fields.title">
             <div class="card-body">
-              <div class="text-muted d-flex">
+              <div v-if="post.fields.author" class="text-muted d-flex">
                 {{post.fields.author.fields.name}} 
                 <span class="ml-auto">{{formatDate(post.fields.publishDate)}}</span>
               </div>
@@ -32,7 +32,7 @@
       </div>
       <article class="mb-4" v-for="person in people" :key="person.fields.email">
         <div class="d-flex align-items-center mb-2 blockquote">
-          <img v-if="person.fields.image.fields" :src="person.fields.image.fields.file.url" class="rounded-circle mr-2" width="80" alt="...">
+          <img v-if="person.fields.image" :src="person.fields.image.fields.file.url" class="rounded-circle mr-2" width="80" alt="...">
           <h1 class="h5 mb-1">
             {{person.fields.name}} 
             <span class="blockquote-footer">
@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     formatDate (date, options = {
-      year: '2-digit',
+      year: 'numeric',
       month: 'short',
       day: 'numeric'
     }) {
