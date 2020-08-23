@@ -26,7 +26,7 @@
         <div class="mb-2">
           <h1 class="h2 highlighted">További cikkek a témában</h1>
         </div>
-        <article class="card shadow mb-2" v-for="post in recommendedPosts" :key="post.fields.slug">
+        <article class="card shadow mb-3" v-for="post in recommendedPosts" :key="post.fields.slug">
           <img v-if="post.fields.heroImage" :src="post.fields.heroImage.fields.file.url" height="200" class="card-img-top" :alt="post.fields.heroImage.fields.title">
           <div class="card-body">
             <div v-if="post.fields.author" class="text-muted d-flex">
