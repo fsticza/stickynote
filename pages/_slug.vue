@@ -1,11 +1,11 @@
 <template>
   <div class="row">
-    <main class="col-sm-8 col-lg-9">
+    <main class="col-sm-8 col-lg-9 mb-3">
       <h1 class="highlighted h1">{{ post.fields.title }}</h1>
       <img v-if="post.fields.heroImage.fields" loading="lazy" :src="post.fields.heroImage.fields.file.url" class="w-100 mb-3" :alt="post.fields.heroImage.fields.title">
       <article v-html="$md.render(post.fields.body)"></article>
     </main>
-    <aside class="col-sm-4 col-lg-3">
+    <aside class="col-sm-4 col-lg-3 mb-3">
       <section>
         <div class="mb-2">
           <h1 class="h2 highlighted">Szerző</h1>

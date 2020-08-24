@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <main class="col-sm-8 col-lg-9">      
+    <main class="col-sm-8 col-lg-9 mb-3">      
       <section>
         <div class="mb-2">
           <h1 class="highlighted h2">Blog</h1>
@@ -26,7 +26,7 @@
       </section>
       <services />
     </main>
-    <aside class="col-sm-4 col-lg-3">
+    <aside class="col-sm-4 col-lg-3 mb-3">
       <div class="mb-2">
         <h1 class="h2 highlighted">Rólunk</h1>
       </div>

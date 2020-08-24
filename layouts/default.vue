@@ -84,6 +84,7 @@ export default {
   position: relative;
   text-align: center;
   z-index: 3;
+  margin-top: 0.5rem;
 
   @include media-breakpoint-up(md) {
     font-size: $h1-font-size;
