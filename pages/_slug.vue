@@ -5,7 +5,7 @@
       <img v-if="post.fields.heroImage.fields" loading="lazy" :src="post.fields.heroImage.fields.file.url" class="w-100 mb-3" :alt="post.fields.heroImage.fields.title">
       <article v-html="$md.render(post.fields.body)"></article>
     </main>
-    <aside class="col-sm-4 col-lg-3 mb-3">
+    <aside v-if="person || recommendedPosts.length" class="col-sm-4 col-lg-3 mb-3">
       <section v-if="person">
         <div class="mb-2">
           <h1 class="h2 highlighted">Szerző</h1>
