@@ -6,7 +6,7 @@
       <article v-html="$md.render(post.fields.body)"></article>
     </main>
     <aside class="col-sm-4 col-lg-3 mb-3">
-      <section>
+      <section v-if="person">
         <div class="mb-2">
           <h1 class="h2 highlighted">Szerző</h1>
         </div>
