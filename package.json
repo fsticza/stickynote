@@ -1,8 +1,8 @@
 {
-  "name": "megan-blog",
+  "name": "stickynote-site",
   "version": "1.0.0",
-  "description": "Animal Crossing Blog by Megan",
-  "author": "sdras",
+  "description": "Eredményesebb vállalatok, élvezetesebb munkahelyek",
+  "author": "ferenc.sticza@gmail.com",
   "private": true,
   "scripts": {
     "dev": "nuxt",

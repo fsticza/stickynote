@@ -1,13 +1,13 @@
 <template>
   <div class="row">
     <main class="col-sm-8 col-lg-9 mb-3">      
-      <section>
+      <section class="">
         <div class="mb-2">
           <h1 class="highlighted h2">Blog</h1>
         </div>
-        <div class="card-columns mb-2">
-          <article class="card shadow" v-for="post in posts" :key="post.fields.slug">
-            <img v-if="post.fields.heroImage" :src="post.fields.heroImage.fields.file.url" height="200" class="card-img-top" :alt="post.fields.heroImage.fields.title">
+        <div class="card-columns">
+          <article class="card shadow mb-4" v-for="post in posts" :key="post.fields.slug">
+            <img v-if="post.fields.heroImage" :src="`${post.fields.heroImage.fields.file.url}?w=525`" class="card-img-top" :alt="post.fields.heroImage.fields.title">
             <div class="card-body">
               <div v-if="post.fields.author" class="text-muted d-flex">
                 {{post.fields.author.fields.name}} 
@@ -98,6 +98,7 @@ export default {
   @include media-breakpoint-up(lg) {
     column-count: 2;
   }
+
 }
 
 </style>

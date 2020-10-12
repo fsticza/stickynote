@@ -46,3 +46,6 @@
     </div>
   </article>
 </template>
+
+<style lang="scss">
+</style>
