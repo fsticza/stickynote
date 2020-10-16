@@ -74,5 +74,8 @@ export default {
         return [...blogEntries.items.map(entry => entry.fields.slug)];
       });
     }
+  },
+  build: {
+    publicPath: 'd1ry54sodxci8i.cloudfront.net'
   }
 };
