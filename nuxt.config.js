@@ -76,6 +76,6 @@ export default {
     }
   },
   build: {
-    publicPath: 'd1ry54sodxci8i.cloudfront.net'
+    publicPath: 'https://d1ry54sodxci8i.cloudfront.net'
   }
 };
