@@ -81,7 +81,6 @@ export default {
   },
   mounted() {
     if (process.browser) {
-      console.log(this)
       this.$gtag('config', process.env.GTAG, {
         page_title: title,
         page_path: this.$route.fullPath,

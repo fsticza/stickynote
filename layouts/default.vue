@@ -46,7 +46,6 @@ export default {
   },
   computed: {
     staticPath () {
-      console.log(process.env.NODE_ENV)
       return process.env.NODE_ENV === 'production' ? 'https://d1ry54sodxci8i.cloudfront.net' :''
     }
   },
