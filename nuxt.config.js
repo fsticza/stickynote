@@ -57,7 +57,8 @@ export default {
   env: {
     CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
     CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
-    CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT
+    CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
+    GTM: process.env.GTM,
   },
   modules: ["@nuxtjs/markdownit"],
   markdownit: {
@@ -76,6 +77,6 @@ export default {
     }
   },
   build: {
-    // publicPath: 'https://d1ry54sodxci8i.cloudfront.net'
-  }
+    publicPath: 'https://d1ry54sodxci8i.cloudfront.net'
+  },
 };

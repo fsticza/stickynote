@@ -2,7 +2,7 @@ import client from "~/plugins/contentful";
 
 export const state = () => ({
   posts: null,
-  people: null
+  people: null,
 });
 
 export const mutations = {
@@ -11,7 +11,7 @@ export const mutations = {
   },
   updatePeople: (state, people) => {
     state.people = people;
-  }
+  },
 };
 
 export const actions = {
@@ -41,6 +41,6 @@ export const actions = {
     } catch (err) {
       console.error(err);
     }
-  }
+  },
   
 };

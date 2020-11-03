@@ -30,16 +30,19 @@
       </div>
     </div>
     <app-footer />
+    <cookie-consent />
   </div>
 </template>
 
 <script>
 
 import AppFooter from "@/components/AppFooter.vue";
+import CookieConsent from "@/components/CookieConsent.vue";
 
 export default {
   components: {
-    AppFooter
+    AppFooter,
+    CookieConsent
   }
 };
 </script>
