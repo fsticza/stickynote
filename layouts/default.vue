@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <nuxt-link exact to="/" class="navbar-brand">
-          <img loading="lazy" src="/img/logo.png" alt="logo" height="40" />
+          <img loading="lazy" :src="`${staticPath}/img/logo.png`" alt="logo" height="40" />
           <span class="pl-3">Sticky Note Consulting</span>
         </nuxt-link>
         <div class="ml-auto d-none d-md-block">
@@ -12,7 +12,7 @@
       </div>
     </nav>
     <header class="head-img">
-      <img class="img" src="/img/header.jpg" alt="Sticky Note Consulting - header image" />
+      <img class="img" :src="`${staticPath}/img/header.jpg`" alt="Sticky Note Consulting - header image" />
       <div class="container">
         <h1 class="head__title">
           <span class="head__line highlighted head__line--first-line">
@@ -43,6 +43,12 @@ export default {
   components: {
     AppFooter,
     CookieConsent
+  },
+  computed: {
+    staticPath () {
+      console.log(process.env.NODE_ENV)
+      return process.env.NODE_ENV === 'production' ? 'https://d1ry54sodxci8i.cloudfront.net' :''
+    }
   }
 };
 </script>
