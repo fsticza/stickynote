@@ -12,6 +12,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/google-gtag": "^1.0.4",
     "@nuxtjs/markdownit": "^1.2.9",
     "contentful": "^7.14.2",
     "dotenv": "^8.2.0",

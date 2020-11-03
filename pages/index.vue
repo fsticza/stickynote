@@ -50,6 +50,7 @@
 
 <script>
 import Services from "@/components/Services.vue";
+const title = "Sticky Note Consulting | Eredményesebb vállalatok, élvezetesebb munkahelyek"
 export default {
   components: {
     Services
@@ -76,7 +77,16 @@ export default {
     }
   },
   head: {
-    title: "Sticky Note Consulting &#8211; Eredményesebb vállalatok, élvezetesebb munkahelyek<"
+    title
+  },
+  mounted() {
+    if (process.browser) {
+      console.log(this)
+      this.$gtag('config', process.env.GTAG, {
+        page_title: title,
+        page_path: this.$route.fullPath,
+      })
+    }
   }
 };
 </script>

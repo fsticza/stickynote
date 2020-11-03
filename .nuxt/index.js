@@ -12,6 +12,7 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
+import nuxt_plugin_googlegtag_5a20e002 from 'nuxt_plugin_googlegtag_5a20e002' // Source: ./google-gtag.js (mode: 'client')
 import nuxt_plugin_markdownit_2de2eee0 from 'nuxt_plugin_markdownit_2de2eee0' // Source: ./markdown-it.js (mode: 'all')
 import nuxt_plugin_contentful_cbbecb4c from 'nuxt_plugin_contentful_cbbecb4c' // Source: ../plugins/contentful (mode: 'all')
 import nuxt_plugin_posts_33c7cbc6 from 'nuxt_plugin_posts_33c7cbc6' // Source: ../plugins/posts (mode: 'all')
@@ -189,6 +190,10 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
+
+  if (process.client && typeof nuxt_plugin_googlegtag_5a20e002 === 'function') {
+    await nuxt_plugin_googlegtag_5a20e002(app.context, inject)
+  }
 
   if (typeof nuxt_plugin_markdownit_2de2eee0 === 'function') {
     await nuxt_plugin_markdownit_2de2eee0(app.context, inject)

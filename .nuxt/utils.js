@@ -150,7 +150,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {"CONTENTFUL_SPACE":"tk329pof7pe9","CONTENTFUL_ACCESSTOKEN":"B550YMXglOWdksEjl8aJRkmkCgh6rEQpU6xdTYN4pIA","GTM":"GTM-PNPPV8G"}
+      env: {"CONTENTFUL_SPACE":"tk329pof7pe9","CONTENTFUL_ACCESSTOKEN":"B550YMXglOWdksEjl8aJRkmkCgh6rEQpU6xdTYN4pIA","GTAG":"G-LWEFML3D1P"}
     }
     // Only set once
     if (!process.static && context.req) {

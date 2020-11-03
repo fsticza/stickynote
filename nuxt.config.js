@@ -25,12 +25,7 @@ export default {
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      // {
-      //   rel: "stylesheet",
-      //   href:
-      //     "https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
-      // }
-    ]
+    ],
   },
   /*
    ** Customize the progress-bar color
@@ -58,12 +53,17 @@ export default {
     CONTENTFUL_SPACE: process.env.CONTENTFUL_SPACE,
     CONTENTFUL_ACCESSTOKEN: process.env.CONTENTFUL_ACCESSTOKEN,
     CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
-    GTM: process.env.GTM,
+    GTAG: process.env.GTAG,
   },
-  modules: ["@nuxtjs/markdownit"],
+  modules: ["@nuxtjs/markdownit", '@nuxtjs/google-gtag'],
   markdownit: {
     html: true,
     injected: true
+  },
+  'google-gtag': {
+    id: process.env.GTAG,
+    debug: false, // enable to track in dev mode
+    disableAutoPageTrack: true, // disable if you don't want to track each page route with router.afterEach(...).
   },
   generate: {
     routes() {

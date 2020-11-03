@@ -90,8 +90,16 @@ export default {
   head() {
     return {
       title: this.post.fields.title
-    };
-  }
+    }
+  },
+  mounted() {
+    if (process.browser) {
+      this.$gtag('config', process.env.GTAG, {
+        page_title: this.post.fields.title,
+        page_path: this.$route.fullPath,
+      })
+    }
+  },
 };
 </script>
 
