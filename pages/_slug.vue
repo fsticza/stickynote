@@ -18,6 +18,9 @@
               <span class="blockquote-footer">
                 {{person.fields.title}}
               </span>
+              <small class="d-block" v-if="person.fields.linkedIn">
+                <a :href="person.fields.linkedIn" target="_bank" rel="noopener noreferrer">LinkedIn profil</a>
+              </small>
             </h1>
           </div>
         </article>

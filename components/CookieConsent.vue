@@ -22,7 +22,6 @@ export default {
   name: 'CookieConsent',
   data () {
     const tracking = process.client && localStorage.getItem('isTrackingEnabled')
-    console.log(tracking)
     return {
       isTrackingConsentPassed: tracking && tracking !== null
     }
