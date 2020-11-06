@@ -24,8 +24,8 @@
           </article>
         </div>
       </section>
-      <services />
     </main>
+
     <aside class="col-sm-4 col-lg-3 mb-3">
       <div class="mb-2">
         <h1 class="h2 highlighted">Rólunk</h1>
@@ -48,6 +48,9 @@
         </div>
       </article>
     </aside>
+
+    <services />
+    
   </div>
 </template>
 
