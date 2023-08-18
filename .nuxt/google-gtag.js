@@ -1,5 +1,5 @@
 export default function ({app: {router}}, inject) {
-  if(true){
+  if(false){
     // inject empty gtag function for disabled mode
     inject('gtag', () => {})
     return

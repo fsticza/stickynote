@@ -3,28 +3,32 @@
   "version": "1.0.0",
   "description": "Eredményesebb vállalatok, élvezetesebb munkahelyek",
   "author": "ferenc.sticza@gmail.com",
+  "engines": {
+    "node": ">=18.16.0 <19"
+  },
   "private": true,
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "imagemin": "node ./imagemin.js",
+    "generate": "nuxt generate",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "imagemin": "node ./imagemin.js"
   },
   "dependencies": {
     "@nuxtjs/google-gtag": "^1.0.4",
-    "@nuxtjs/markdownit": "^1.2.9",
+    "@nuxtjs/markdownit": "^2.0.0",
     "contentful": "^7.14.2",
-    "dotenv": "^8.2.0",
-    "node-sass": "^4.13.1",
-    "nuxt": "^2.0.0",
+    "dotenv": "^16.3.1",
+    "nuxt": "^2.7.1",
+    "sass": "^1.66.0",
     "sass-loader": "^8.0.2"
   },
   "devDependencies": {
-    "bootstrap": "^4.5.0",
-    "imagemin": "^6.0.0",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-pngquant": "^6.0.0"
+    "bootstrap": "^5.3.1",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "webpack": "^4.46.0"
   }
 }

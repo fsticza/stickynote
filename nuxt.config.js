@@ -4,7 +4,7 @@ dotenv.config();
 const contentful = require("contentful");
 const client = contentful.createClient({
   space: process.env.CONTENTFUL_SPACE,
-  accessToken: process.env.CONTENTFUL_ACCESSTOKEN
+  accessToken: process.env.CONTENTFUL_ACCESSTOKEN,
 });
 
 export default {
@@ -12,6 +12,9 @@ export default {
   /*
    ** Headers of the page
    */
+  server: {
+    host: "0", // default: localhost
+  },
   head: {
     title: process.env.npm_package_name || "",
     meta: [
@@ -20,12 +23,10 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
-      }
+        content: process.env.npm_package_description || "",
+      },
     ],
-    link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-    ],
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
   /*
    ** Customize the progress-bar color
@@ -39,8 +40,8 @@ export default {
     bundleRenderer: {
       shouldPreload: (file, type) => {
         return ["script", "style", "font"].includes(type);
-      }
-    }
+      },
+    },
   },
   /*
    ** Plugins to load before mounting the App
@@ -55,12 +56,12 @@ export default {
     CONTENTFUL_ENVIRONMENT: process.env.CONTENTFUL_ENVIRONMENT,
     GTAG: process.env.GTAG,
   },
-  modules: ["@nuxtjs/markdownit", '@nuxtjs/google-gtag'],
+  modules: ["@nuxtjs/markdownit", "@nuxtjs/google-gtag"],
   markdownit: {
     html: true,
-    injected: true
+    injected: true,
   },
-  'google-gtag': {
+  "google-gtag": {
     id: process.env.GTAG,
     debug: false, // enable to track in dev mode
     disableAutoPageTrack: true, // disable if you don't want to track each page route with router.afterEach(...).
@@ -69,14 +70,14 @@ export default {
     routes() {
       return Promise.all([
         client.getEntries({
-          content_type: "blogPost"
-        })
+          content_type: "blogPost",
+        }),
       ]).then(([blogEntries]) => {
-        return [...blogEntries.items.map(entry => entry.fields.slug)];
+        return [...blogEntries.items.map((entry) => entry.fields.slug)];
       });
-    }
+    },
   },
   build: {
-    publicPath: 'https://d1ry54sodxci8i.cloudfront.net'
+    publicPath: "https://d1ry54sodxci8i.cloudfront.net",
   },
 };

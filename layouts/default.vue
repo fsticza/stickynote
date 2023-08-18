@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <nuxt-link exact to="/" class="navbar-brand">
-          <img loading="lazy" :src="`${staticPath}/img/logo-88.png`" alt="logo" height="40" />
+          <img :src="`${staticPath}/img/logo-88.png`" alt="logo" height="40" width="41" />
           <span class="pl-3">Sticky Note Consulting</span>
         </nuxt-link>
         <div class="ml-auto d-none d-md-block">
