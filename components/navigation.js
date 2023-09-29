@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
-      <div class="flex items-center flex-shrink-0 text-white mr-6">
+    <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+      <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Link href={`/`} className="mr-2 flex items-center">
           <Image
             className="h-8 w-8 mr-2 inline-block"
@@ -13,15 +13,15 @@ export default function Navigation() {
             height={40}
             alt="Stickynote Consulting logo"
           />
-          <span class="font-semibold text-xl tracking-tight inline-block">
+          <span className="font-semibold text-xl tracking-tight inline-block">
             Sticky Note
           </span>
         </Link>
       </div>
-      <div class="block lg:hidden">
-        <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+      {/* <div className="block lg:hidden">
+        <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
           <svg
-            class="fill-current h-3 w-3"
+            className="fill-current h-3 w-3"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -29,12 +29,12 @@ export default function Navigation() {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </button>
-      </div>
-      {/* <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-        <div class="text-sm lg:flex-grow">
+      </div> */}
+      {/* <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div className="text-sm lg:flex-grow">
           <a
             href="/"
-            class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+            className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
           >
             Blog
           </a>

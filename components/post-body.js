@@ -7,9 +7,9 @@ export default function PostBody({ body, youtubeUrl }) {
       <div className={markdownStyles["markdown"]}>
         <ReactMarkdown>{body}</ReactMarkdown>
         {youtubeUrl && (
-          <div class="relative" style={{ paddingTop: "56.25%" }}>
+          <div className="relative" style={{ paddingTop: "56.25%" }}>
             <iframe
-              class="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full h-full"
               frameborder="0"
               width="560"
               height="315"
