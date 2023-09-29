@@ -6,12 +6,12 @@
         "label": "name"
       }
     },
-    "picture": {
+    "image": {
       "type": "Image",
       "config": {
         "constraint": {},
         "thumbnails": [],
-        "label": "picture"
+        "label": "image"
       }
     }
   }

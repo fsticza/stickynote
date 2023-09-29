@@ -1,28 +1,25 @@
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { BLOCKS } from '@contentful/rich-text-types'
-import markdownStyles from './markdown-styles.module.css'
-import RichTextAsset from './rich-text-asset'
+import markdownStyles from "./markdown-styles.module.css";
+import ReactMarkdown from "react-markdown";
 
-const customMarkdownOptions = (content) => ({
-  renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: (node) => (
-      <RichTextAsset
-        id={node.data.target.sys.id}
-        assets={content.links.assets.block}
-      />
-    ),
-  },
-})
-
-export default function PostBody({ content }) {
+export default function PostBody({ body, youtubeUrl }) {
   return (
     <div className="max-w-2xl mx-auto">
-      <div className={markdownStyles['markdown']}>
-        {documentToReactComponents(
-          content.json,
-          customMarkdownOptions(content)
+      <div className={markdownStyles["markdown"]}>
+        <ReactMarkdown>{body}</ReactMarkdown>
+        {youtubeUrl && (
+          <div class="relative" style={{ paddingTop: "56.25%" }}>
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              frameborder="0"
+              width="560"
+              height="315"
+              src={youtubeUrl}
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
         )}
       </div>
     </div>
-  )
+  );
 }

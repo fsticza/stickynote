@@ -62,8 +62,8 @@
           "omitted": false
         },
         {
-          "id": "picture",
-          "name": "Picture",
+          "id": "image",
+          "name": "Asset",
           "type": "Link",
           "localized": false,
           "required": true,
@@ -226,18 +226,8 @@
           "omitted": false
         },
         {
-          "id": "excerpt",
-          "name": "Excerpt",
-          "type": "Symbol",
-          "localized": false,
-          "required": true,
-          "validations": [],
-          "disabled": false,
-          "omitted": false
-        },
-        {
-          "id": "coverImage",
-          "name": "Cover Image",
+          "id": "heroImage",
+          "name": "Hero Image",
           "type": "Link",
           "localized": false,
           "required": true,
@@ -325,7 +315,7 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "picture",
+          "fieldId": "image",
           "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         }
@@ -391,17 +381,12 @@
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "excerpt",
-          "widgetId": "singleLine",
-          "widgetNamespace": "builtin"
-        },
-        {
-          "fieldId": "coverImage",
+          "fieldId": "heroImage",
           "widgetId": "assetLinkEditor",
           "widgetNamespace": "builtin"
         },
         {
-          "fieldId": "date",
+          "fieldId": "publishDate",
           "widgetId": "datePicker",
           "widgetNamespace": "builtin"
         },

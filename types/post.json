@@ -14,24 +14,18 @@
         "label": "content"
       }
     },
-    "excerpt": {
-      "type": "Text",
-      "config": {
-        "label": "excerpt"
-      }
-    },
-    "coverimage": {
+    "heroImage": {
       "type": "Image",
       "config": {
         "constraint": {},
         "thumbnails": [],
-        "label": "coverimage"
+        "label": "heroImage"
       }
     },
-    "date": {
+    "publishDate": {
       "type": "Date",
       "config": {
-        "label": "date"
+        "label": "publishDate"
       }
     },
     "author": {
