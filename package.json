@@ -1,34 +1,25 @@
 {
-  "name": "stickynote-site",
-  "version": "1.0.0",
-  "description": "Eredményesebb vállalatok, élvezetesebb munkahelyek",
-  "author": "ferenc.sticza@gmail.com",
-  "engines": {
-    "node": ">=18.16.0 <19"
-  },
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "generate": "nuxt generate",
-    "start": "nuxt start",
-    "imagemin": "node ./imagemin.js"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "setup": "node ./contentful/setup.js"
   },
   "dependencies": {
-    "@nuxtjs/google-gtag": "^1.0.4",
-    "@nuxtjs/markdownit": "^2.0.0",
-    "contentful": "^7.14.2",
+    "@contentful/rich-text-react-renderer": "^15.17.1",
+    "classnames": "2.3.1",
+    "date-fns": "2.28.0",
     "dotenv": "^16.3.1",
-    "nuxt": "^2.7.1",
-    "sass": "^1.66.0",
-    "sass-loader": "^8.0.2"
+    "next": "^13.4.19",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^8.0.7"
   },
   "devDependencies": {
-    "bootstrap": "^5.3.1",
-    "imagemin": "^8.0.1",
-    "imagemin-jpegtran": "^7.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "webpack": "^4.46.0"
+    "autoprefixer": "10.4.2",
+    "contentful-import": "^7.8.7",
+    "postcss": "8.4.5",
+    "tailwindcss": "^3.0.15"
   }
 }
