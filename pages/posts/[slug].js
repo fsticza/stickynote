@@ -8,7 +8,11 @@ import Header from "../../components/header";
 import PostHeader from "../../components/post-header";
 import SectionSeparator from "../../components/section-separator";
 import Layout from "../../components/layout";
-import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
+import {
+  getAllPosts,
+  getAllPostsWithSlug,
+  getPostAndMorePosts,
+} from "../../lib/api";
 import PostTitle from "../../components/post-title";
 
 export default function Post({ post, morePosts, preview }) {
@@ -63,7 +67,7 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export async function getStaticPaths() {
-  const allPosts = await getAllPostsWithSlug();
+  const allPosts = (await getAllPosts(false)) ?? [];
   return {
     paths: allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [],
     fallback: true,
