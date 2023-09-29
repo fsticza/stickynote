@@ -1,17 +1,17 @@
-import Image from "next/image";
 import Link from "next/link";
+import ContentfulImage from "./contentful-image";
 
 export default function Navigation() {
   return (
     <nav className="flex items-center justify-between flex-wrap bg-gray-800 p-6">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <Link href={`/`} className="mr-2 flex items-center">
-          <Image
-            className="h-8 w-8 mr-2 inline-block"
-            src="/logo.png"
+          <ContentfulImage
             width={41}
             height={40}
             alt="Stickynote Consulting logo"
+            className="h-8 w-8 mr-2 inline-block"
+            src="/logo.png"
           />
           <span className="font-semibold text-xl tracking-tight inline-block">
             Sticky Note
