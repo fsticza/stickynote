@@ -5,8 +5,9 @@ export default function Avatar({ name, image }) {
     <div className="flex items-center">
       <div className="relative w-12 h-12 mr-4">
         <ContentfulImage
+          width={48}
+          height={48}
           src={image.url}
-          layout="fill"
           className="rounded-full"
           alt={name}
         />
