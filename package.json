@@ -18,6 +18,8 @@
     "react-markdown": "9.0.0"
   },
   "devDependencies": {
+    "@netlify/next": "*",
+    "@netlify/plugin-nextjs": "*",
     "autoprefixer": "10.4.16",
     "contentful-import": "9.2.1",
     "postcss": "8.4.31",
