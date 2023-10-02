@@ -1,11 +1,11 @@
 [build]
   publish = "out"
-  command = "next build"
+  command = "npm run build && npm run export"
 [build.environment]
   NODE_VERSION = "18"
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
-  for = "/img/*"
+  for = "/favicon/*"
   [headers.values]
 	cache-control = '''
 	public,
