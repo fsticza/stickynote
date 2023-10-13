@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "@netlify/next": "*",
-    "@netlify/plugin-nextjs": "*",
+    "@netlify/plugin-nextjs": "appdir",
     "autoprefixer": "10.4.16",
     "contentful-import": "9.2.1",
     "postcss": "8.4.31",
